@@ -1,9 +1,9 @@
-var Promise = require('Promise'),
+var Promise = require('bluebird'),
     request = require('request')
 
-export function postChatworkMessage(apiToken, roomId, message) {
+export function post(apiToken, roomId, message) {
     const options = {
-        url: 'https://api.chatwork.com/v1/rooms/' + roomIdd + '/messages',
+        url: 'https://api.chatwork.com/v1/rooms/' + roomId + '/messages',
         headers: {
             'X-ChatWorkToken': apiToken
         },
@@ -18,7 +18,8 @@ export function postChatworkMessage(apiToken, roomId, message) {
             if (!err && res.statusCode == 200) {
                 resolve(body)
             } else {
-                reject(err)
+                console.error(err || res.statusCode);
+                reject(err || res.statusCode)
             }
         })
     })

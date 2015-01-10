@@ -15,7 +15,7 @@ Promiseを返します。
 var APIKey = 'AAA',
     roomId = '1234'
 
-postChatworkMessage(APIKey, roomId, 'hello world')
+postChatworkMessage.post(APIKey, roomId, 'hello world')
 ```
 
 ### Parameters
@@ -37,11 +37,11 @@ npm install post-chatwork-message
 
 実行例
 ```js
-var document = require('post-chatwork-message')
+var chatwork = require('post-chatwork-message')
 var APIKey = 'AAA',
 roomId = '1234'
 
-postChatworkMessage(APIKey, roomId, 'hello world')
+chatwork.post(APIKey, roomId, 'hello world')
 ```
 
 ### For browsers
