@@ -1,0 +1,30 @@
+{
+  "name": "post-chatwork-message",
+  "description": "Post a message to a room of the Chatwork.",
+  "version": "0.0.1",
+  "author": "ledsun",
+  "bugs": {
+    "url": "https://github.com/ledsun/post-chatwork-message/issues"
+  },
+  "devDependencies": {
+    "6to5": "^2.9.4"
+  },
+  "homepage": "https://github.com/ledsun/post-chatwork-message",
+  "keywords": [
+    "chatwork",
+    "post",
+    "message",
+    "promise"
+  ],
+  "license": "MIT",
+  "main": "lib/index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ledsun/post-chatwork-message.git"
+  },
+  "scripts": {
+    "build": "6to5 src --out-dir lib  --source-maps-inline",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "6to5 src --out-dir lib --watch --source-maps-inline"
+  }
+}
