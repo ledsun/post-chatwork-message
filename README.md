@@ -71,7 +71,6 @@ contributeするには
 1. Enjoy a refreshing coffe and wait
 
 ### Test
-#### Standalone
 
 [mocha](https://github.com/mochajs/mocha) is used to test.
 
@@ -79,6 +78,7 @@ contributeするには
 
 ```
 npm install
+echo '{"token":"YOUR_TOKEN", "roomId":"YOUR_ROOM"}' > token.json
 npm test
 ```
 
