@@ -19,14 +19,12 @@ postChatworkMessage(apiToken, roomId, 'hello world')
 ```
 
 ### Parameters
-```
-/**
-* method
-* @param apiToken {string} - Chatwork API Token {@link http://developer.chatwork.com/ja/authenticate.html 認証方法 - チャットワークAPIドキュメント}
-* @param roomId {string} - An Id of the room of the Chatwork
-* @param message {string} - A message to send
-*/
-```
+
+Name | Type | Description
+--- | --- | ---
+apiToken | string | Chatwork API Token. see [認証方法 - チャットワークAPIドキュメント](http://developer.chatwork.com/ja/authenticate.html).
+roomId | string | An Id of the room of the Chatwork. Remember a `#!rid` is excluded.
+message | string | A message to send.
 
 ## Setup
 
