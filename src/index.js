@@ -3,7 +3,7 @@ import request from 'request'
 
 export default function(apiToken, roomId, message) {
     const options = {
-        url: 'https://api.chatwork.com/v1/rooms/' + roomId + '/messages',
+        url: `https://api.chatwork.com/v1/rooms/${roomId}/messages`,
         headers: {
             'X-ChatWorkToken': apiToken
         },
