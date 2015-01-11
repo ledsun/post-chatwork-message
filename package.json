@@ -6,6 +6,10 @@
   "bugs": {
     "url": "https://github.com/ledsun/post-chatwork-message/issues"
   },
+  "dependencies": {
+    "bluebird": "^2.6.2",
+    "request": "^2.51.0"
+  },
   "devDependencies": {
     "6to5": "^2.9.4",
     "mocha": "^2.1.0"
@@ -27,9 +31,5 @@
     "build": "6to5 src --out-dir lib --source-maps-inline",
     "test": "mocha",
     "watch": "6to5 src --out-dir lib --watch --source-maps-inline"
-  },
-  "dependencies": {
-    "bluebird": "^2.6.2",
-    "request": "^2.51.0"
   }
 }
