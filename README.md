@@ -1,16 +1,13 @@
 # post-chatwork-message
 
-Post a message to a room of the Chatwork.
+Post a message to a room of the Chatwork. / Chatworkにメッセージを投稿します。
 
-Chatworkにメッセージを投稿します。
-
-This function will return a Promise.
-
-Promiseを返します。
+This function will return a Promise. / Promiseを返します。
 
 ## Usage
 
-実行例
+Exapmle / 実行例
+
 ```js
 var apiToken = 'AAA',
     roomId = '1234'
@@ -28,12 +25,12 @@ message | string | A message to send.
 
 ## Setup
 
-### For Node.js
 ```
 npm install post-chatwork-message
 ```
 
-実行例
+Exapmle / 実行例
+
 ```js
 var postChatworkMessage = require('post-chatwork-message')
 var APIKey = 'AAA',
@@ -42,37 +39,35 @@ roomId = '1234'
 postChatworkMessage(APIKey, roomId, 'hello world')
 ```
 
-## Contributing
+## Development
 
-contributeするには
+### Build
 
-1. Fork it.
-1. Create a branch (git checkout -b my_function)
-1. Commit your changes (git commit -am "Added My Function")
-1. Push to the branch (git push origin my_function)
-1. Open a Pull Request
-1. Enjoy a refreshing coffe and wait
+This function is written in ES6. / ES6で書いています。
+
+[6to5](https://github.com/6to5/6to5) is used to convert ES5. /
+ [6to5](https://github.com/6to5/6to5)を使ってES5に変換します。
+
+ ```
+ npm install
+ npm run build
+ ```
 
 ### Test
 
-[mocha](https://github.com/mochajs/mocha) is used to test.
+[mocha](https://github.com/mochajs/mocha) is used to test. / [mocha](https://github.com/mochajs/mocha)を使います。
 
-[mocha](https://github.com/mochajs/mocha)を使います。
+Prepare secrets for Chatwork in `token.json`. / Chatworkへの接続情報を書いた`token.json`ファイルを用意します。
 
 ```
-npm install
-npm run build
 echo '{"token":"YOUR_TOKEN", "roomId":"YOUR_ROOM"}' > token.json
 npm test
 ```
 
-
 ### Deploy
-#### npm
-Update `package.json`.
+Update `package.json`. / `package.json`を更新します。
 
-`package.json`を更新します。
-
+and / それから
 ```
 npm install
 npm run build
