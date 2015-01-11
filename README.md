@@ -12,10 +12,10 @@ Promiseを返します。
 
 実行例
 ```js
-var APIKey = 'AAA',
+var apiToken = 'AAA',
     roomId = '1234'
 
-postChatworkMessage.post(APIKey, roomId, 'hello world')
+postChatworkMessage(apiToken, roomId, 'hello world')
 ```
 
 ### Parameters
@@ -37,26 +37,11 @@ npm install post-chatwork-message
 
 実行例
 ```js
-var chatwork = require('post-chatwork-message')
+var postChatworkMessage = require('post-chatwork-message')
 var APIKey = 'AAA',
 roomId = '1234'
 
-chatwork.post(APIKey, roomId, 'hello world')
-```
-
-### For browsers
-
-Use browserify.
-
-For example:
-```
-browserify example.js -o bundle.js
-```
-
-htmlにscriptタグを埋め込みます。
-```html
-<span id="result"></span>
-<script src="bundle.js"></script>
+postChatworkMessage(APIKey, roomId, 'hello world')
 ```
 
 ## Contributing
@@ -78,6 +63,7 @@ contributeするには
 
 ```
 npm install
+npm run build
 echo '{"token":"YOUR_TOKEN", "roomId":"YOUR_ROOM"}' > token.json
 npm test
 ```
@@ -91,8 +77,8 @@ Update `package.json`.
 
 ```
 npm install
-npm test
 npm run build
+npm test
 npm publish
 ```
 

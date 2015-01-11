@@ -1,7 +1,7 @@
 var Promise = require('bluebird'),
     request = require('request')
 
-export function post(apiToken, roomId, message) {
+export default function(apiToken, roomId, message) {
     const options = {
         url: 'https://api.chatwork.com/v1/rooms/' + roomId + '/messages',
         headers: {
