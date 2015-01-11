@@ -29,7 +29,7 @@
   },
   "scripts": {
     "build": "6to5 src --out-dir lib --source-maps-inline",
-    "test": "mocha",
+    "test": "mocha --compilers js:6to5/register",
     "watch": "6to5 src --out-dir lib --watch --source-maps-inline"
   }
 }
