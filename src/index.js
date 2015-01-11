@@ -1,5 +1,5 @@
-var Promise = require('bluebird'),
-    request = require('request')
+import Promise from 'bluebird'
+import request from 'request'
 
 export default function(apiToken, roomId, message) {
     const options = {
@@ -13,8 +13,8 @@ export default function(apiToken, roomId, message) {
         useQuerystring: true
     }
 
-    return new Promise(function(resolve, reject) {
-        request.post(options, function(err, res, body) {
+    return new Promise((resolve, reject) => {
+        request.post(options, (err, res, body) => {
             if (!err && res.statusCode == 200) {
                 resolve(body)
             } else {
