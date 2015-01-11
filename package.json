@@ -14,6 +14,9 @@
     "6to5": "^2.9.4",
     "mocha": "^2.1.0"
   },
+  "files": [
+    "lib"
+  ],
   "homepage": "https://github.com/ledsun/post-chatwork-message",
   "keywords": [
     "chatwork",
