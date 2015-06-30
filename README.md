@@ -45,8 +45,8 @@ postChatworkMessage(APIKey, roomId, 'hello world')
 
 This function is written in ES6. / ES6で書いています。
 
-[6to5](https://github.com/6to5/6to5) is used to convert ES5. /
- [6to5](https://github.com/6to5/6to5)を使ってES5に変換します。
+[babel](babeljs.io) is used to convert ES5. /
+ [babel](babeljs.io)を使ってES5に変換します。
 
  ```
  npm install
