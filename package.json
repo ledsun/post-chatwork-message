@@ -1,7 +1,7 @@
 {
   "name": "post-chatwork-message",
   "description": "Post a message to a room of the Chatwork.",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "author": "ledsun",
   "bugs": {
     "url": "https://github.com/ledsun/post-chatwork-message/issues"
