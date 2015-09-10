@@ -20,8 +20,8 @@
   "homepage": "https://github.com/ledsun/post-chatwork-message",
   "keywords": [
     "chatwork",
-    "post",
     "message",
+    "post",
     "promise"
   ],
   "license": "MIT",
