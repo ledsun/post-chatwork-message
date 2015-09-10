@@ -34,6 +34,7 @@
     "build": "babel src --out-dir lib",
     "pretest": "npm run build",
     "test": "mocha --compilers js:babel/register",
+    "prepublish": "npm test",
     "watch": "babel src --out-dir lib --watch --source-maps-inline"
   }
 }
