@@ -32,9 +32,9 @@ npm install post-chatwork-message
 Exapmle / 実行例
 
 ```js
-var postChatworkMessage = require('post-chatwork-message')
-var APIKey = 'AAA',
-roomId = '1234'
+let postChatworkMessage = require('post-chatwork-message'),
+  APIKey = 'AAA',
+  roomId = '1234'
 
 postChatworkMessage(APIKey, roomId, 'hello world')
 ```
@@ -43,15 +43,13 @@ postChatworkMessage(APIKey, roomId, 'hello world')
 
 ### Build
 
-This function is written in ES6. / ES6で書いています。
+[Babel.js](babeljs.io) is used to convert ES5. /
+[Babel.js](babeljs.io)を使ってES5に変換します。
 
-[babel](babeljs.io) is used to convert ES5. /
- [babel](babeljs.io)を使ってES5に変換します。
-
- ```
- npm install
- npm run build
- ```
+```
+npm install
+npm run build
+```
 
 ### Test
 
@@ -65,13 +63,8 @@ npm test
 ```
 
 ### Deploy
-Update `package.json`. / `package.json`を更新します。
-
-and / それから
 ```
-npm install
-npm run build
-npm test
+npm version patch
 npm publish
 ```
 
