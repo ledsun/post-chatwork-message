@@ -1,26 +1,20 @@
 import Promise from 'bluebird'
-import request from 'request'
+import request from 'superagent'
 
 export default function(apiToken, roomId, message) {
-    const options = {
-        url: `https://api.chatwork.com/v1/rooms/${roomId}/messages`,
-        headers: {
-            'X-ChatWorkToken': apiToken
-        },
-        form: {
-            body: message
-        },
-        useQuerystring: true
-    }
+  const url = `https://api.chatwork.com/v1/rooms/${roomId}/messages`
 
-    return new Promise((resolve, reject) => {
-        request.post(options, (err, res, body) => {
-            if (!err && res.statusCode == 200) {
-                resolve(body)
-            } else {
-                console.error(err || res.statusCode);
-                reject(err || res.statusCode)
-            }
-        })
-    })
+  return new Promise((resolve, reject) => {
+    request
+      .post(url)
+      .set('X-ChatWorkToken', apiToken)
+      .send(`body=${message}`)
+      .end((err, res) => {
+        if (!err && res.statusCode == 200) {
+          resolve(res)
+        } else {
+          reject(err)
+        }
+      })
+  })
 }
