@@ -12,7 +12,9 @@
   },
   "devDependencies": {
     "babel": "^5.8.23",
-    "mocha": "^2.3.2"
+    "espower-babel": "^3.3.0",
+    "mocha": "^2.3.2",
+    "power-assert": "^1.0.1"
   },
   "files": [
     "lib"
@@ -32,8 +34,7 @@
   },
   "scripts": {
     "build": "babel src --out-dir lib",
-    "pretest": "npm run build",
-    "test": "mocha --compilers js:babel/register",
+    "test": "mocha --compilers js:espower-babel/guess",
     "prepublish": "npm test",
     "watch": "babel src --out-dir lib --watch --source-maps-inline"
   }
