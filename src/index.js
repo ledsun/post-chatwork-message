@@ -1,12 +1,12 @@
 import Promise from 'bluebird'
 import request from 'superagent'
 
-export default function(apiToken, roomId, message) {
-  const url = `https://api.chatwork.com/v1/rooms/${roomId}/messages`
+export default postChatworkMessage
 
+function postChatworkMessage(apiToken, roomId, message) {
   return new Promise((resolve, reject) => {
     request
-      .post(url)
+      .post(url(roomId))
       .set('X-ChatWorkToken', apiToken)
       .send(`body=${message}`)
       .end((err, res) => {
@@ -17,4 +17,23 @@ export default function(apiToken, roomId, message) {
         }
       })
   })
+}
+
+postChatworkMessage.getRecents = function(apiToken, roomId) {
+  return new Promise((resolve, reject) => {
+    request
+      .get(url(roomId))
+      .set('X-ChatWorkToken', apiToken)
+      .end((err, res) => {
+        if (!err) {
+          resolve(res)
+        } else {
+          reject(err)
+        }
+      })
+  })
+}
+
+function url(roomId) {
+  return `https://api.chatwork.com/v1/rooms/${roomId}/messages`
 }
