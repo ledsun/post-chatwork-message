@@ -35,7 +35,7 @@
   "scripts": {
     "build": "babel src --out-dir lib",
     "test": "mocha --compilers js:espower-babel/guess",
-    "prepublish": "npm test",
+    "prepublish": "npm run build",
     "watch": "babel src --out-dir lib --watch --source-maps-inline"
   }
 }
