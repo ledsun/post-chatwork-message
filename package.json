@@ -7,7 +7,6 @@
     "url": "https://github.com/ledsun/post-chatwork-message/issues"
   },
   "dependencies": {
-    "bluebird": "^2.10.2",
     "superagent": "^1.4.0"
   },
   "devDependencies": {
