@@ -8,7 +8,7 @@ function postChatworkMessage(apiToken, roomId, message) {
     request
       .post(url(roomId))
       .set('X-ChatWorkToken', apiToken)
-      .send(`body=${message}`)
+      .send(`body=${encodeURIComponent(message)}`)
       .end((err, res) => {
         if (!err && res.statusCode == 200) {
           resolve(res)

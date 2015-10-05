@@ -3,6 +3,9 @@ import postChatworkMessage from '../src'
 import assert from 'power-assert'
 import request from 'superagent'
 
+// & is need to be url encode.
+const MESSAGE = 'A test message for post-chatwork-message & hello'
+
 describe('postChatworkMessage', () => {
   beforeEach(done => {
     // Flush messages before test.
@@ -12,7 +15,7 @@ describe('postChatworkMessage', () => {
   })
 
   it('post one message', (done) => {
-    return postChatworkMessage(token.token, token.roomId, 'A test messago for post-chatwork-message')
+    return postChatworkMessage(token.token, token.roomId, MESSAGE)
       .then(res => {
         assert(res, 'The res is not null.')
         assert.equal(res.status, 200)
@@ -22,7 +25,7 @@ describe('postChatworkMessage', () => {
           .getRecents(token.token, token.roomId)
           .then((res) => {
             assert.equal(res.body.length, 1)
-            assert.equal(res.body[0].body, 'A test messago for post-chatwork-message')
+            assert.equal(res.body[0].body, MESSAGE)
             done()
           })
       })
