@@ -1,6 +1,6 @@
-import request from 'superagent'
+const request = require('superagent')
 
-export default postChatworkMessage
+module.exports = postChatworkMessage
 
 function postChatworkMessage(apiToken, roomId, message) {
   return new Promise((resolve, reject) => {

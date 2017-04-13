@@ -1,7 +1,7 @@
-import token from '../token'
-import postChatworkMessage from '../src'
-import assert from 'power-assert'
-import request from 'superagent'
+const token = require('../token')
+const postChatworkMessage = require('../src')
+const assert = require('power-assert')
+const request = require('superagent')
 
 // & is need to be url encode.
 const MESSAGE = 'A test message for post-chatwork-message & hello'
