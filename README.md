@@ -9,8 +9,8 @@ This function will return a Promise. / Promiseを返します。
 Exapmle / 実行例
 
 ```js
-var apiToken = 'AAA',
-    roomId = '1234'
+const apiToken = 'AAA'
+const roomId = '1234'
 
 postChatworkMessage(apiToken, roomId, 'hello world')
 ```
@@ -32,24 +32,14 @@ npm install post-chatwork-message
 Exapmle / 実行例
 
 ```js
-let postChatworkMessage = require('post-chatwork-message'),
-  APIKey = 'AAA',
-  roomId = '1234'
+const postChatworkMessage = require('post-chatwork-message')
+const APIKey = 'AAA'
+const roomId = '1234'
 
 postChatworkMessage(APIKey, roomId, 'hello world')
 ```
 
-## Development
-
-### Build
-
-[Babel.js](babeljs.io) is used to convert ES5. /
-[Babel.js](babeljs.io)を使ってES5に変換します。
-
-```
-npm install
-npm run build
-```
+## For development
 
 ### Test
 
