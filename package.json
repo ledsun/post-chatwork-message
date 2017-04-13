@@ -10,15 +10,15 @@
     "superagent": "^1.4.0"
   },
   "devDependencies": {
-    "babel": "^5.8.23",
     "mocha": "^2.3.3",
     "power-assert": "^1.1.0"
   },
   "engines": {
-    "node": ">=4.3"
+    "node": ">=4.3",
+    "npm": ">=4.0"
   },
   "files": [
-    "lib"
+    "index.js"
   ],
   "homepage": "https://github.com/ledsun/post-chatwork-message",
   "keywords": [
@@ -28,15 +28,13 @@
     "promise"
   ],
   "license": "MIT",
-  "main": "lib/index.js",
+  "main": "index.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/ledsun/post-chatwork-message.git"
   },
   "scripts": {
-    "build": "babel src --out-dir lib",
-    "prepublish": "npm run build",
-    "test": "mocha",
-    "watch": "babel src --out-dir lib --watch --source-maps-inline"
+    "prepublishOnly": "npm test",
+    "test": "mocha"
   }
 }
