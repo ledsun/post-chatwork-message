@@ -1,5 +1,5 @@
-const token = require('../token')
-const postChatworkMessage = require('../')
+const token = require('./token')
+const postChatworkMessage = require('./')
 const assert = require('power-assert')
 const request = require('superagent')
 
