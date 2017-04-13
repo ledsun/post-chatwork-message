@@ -15,7 +15,7 @@ describe('postChatworkMessage', () => {
   })
 
   it('post one message', (done) => {
-    return postChatworkMessage(token.token, token.roomId, MESSAGE)
+    postChatworkMessage(token.token, token.roomId, MESSAGE)
       .then(res => {
         assert(res, 'The res is not null.')
         assert.equal(res.status, 200)
