@@ -34,5 +34,5 @@ postChatworkMessage.getRecents = function(apiToken, roomId) {
 }
 
 function url(roomId) {
-  return `https://api.chatwork.com/v1/rooms/${roomId}/messages`
+  return `https://api.chatwork.com/v2/rooms/${roomId}/messages`
 }
