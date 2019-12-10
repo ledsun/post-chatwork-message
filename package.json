@@ -7,11 +7,11 @@
     "url": "https://github.com/ledsun/post-chatwork-message/issues"
   },
   "dependencies": {
-    "superagent": "^3.5.2"
+    "superagent": "^5.1.2"
   },
   "devDependencies": {
-    "mocha": "^3.2.0",
-    "power-assert": "^1.1.0"
+    "mocha": "^6.2.2",
+    "power-assert": "^1.6.1"
   },
   "engines": {
     "node": ">=4.3",
